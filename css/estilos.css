@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  font-size: 1.1rem;
 }
 
 body
@@ -67,6 +68,7 @@ img
   padding: 12px;
   color: #FFFFFF;
   font-size: 20px;
+  margin-top: 2rem;
 }
 
 .button_banner:hover
@@ -138,7 +140,6 @@ img
 
 .banner2
 {
-  height: 50vh;
   color: #FFFFFF;
   position: relative;
   background-image: url('../img/banner1.jpg');
@@ -156,14 +157,15 @@ img
 {
   position: absolute;
   width: 100%;
-  top: 50%;
+  /* top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%); */
   text-align: center;
 }
 
 .footer
 {
+  position: relative;
   background: #292929;
   color: #FFFFFF;
   text-align: center;
@@ -172,16 +174,16 @@ img
 
 @media(min-width: 320px)
 {
-  .banner h1
-  {
-    font-size: 30px;
-  }
-
   .grid
   {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner h1
+  {
+    font-size: 30px;
   }
 
   .team .team_grid
@@ -191,13 +193,66 @@ img
 
   .info .contenedor
   {
-    grid-template-columns: repeat(3, 150px);
+    grid-template-columns: repeat(3, 110px);
     justify-content: space-around;
+  }
+
+  .banner
+  {
+    height: 60vh;
+  }
+
+  .banner2
+  {
+    height: 550px;
   }
 
   .banner2 h2
   {
-    font-size: 50px;
+    font-size: 2rem;
+    padding: 2rem;
+  }
+
+  .banner2 p
+  {
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media(min-width: 480px)
+{
+
+  .banner
+  {
+    height: 100vh;
+  }
+
+  .team_columna
+  {
+    width: 12rem;
+    margin: auto;
+  }
+
+  .banner2 p
+  {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (min-width: 768px)
+{
+
+  .banner
+  {
+    height: 50vh;
+  }
+
+  .team .team_grid
+  {
+    grid-template-columns: repeat(2, 195px);
+    justify-content: space-around;
   }
 
   .banner2 p
@@ -206,17 +261,40 @@ img
   }
 }
 
-@media (min-width: 768px)
+@media (min-width: 810px)
 {
-  .team .team_grid
+  .banner
   {
-    grid-template-columns: repeat(4, 195px);
-    justify-content: space-around;
+    height: 100vh;
+  }
+
+  .banner2 p
+  {
+    font-size: 1.3rem;
   }
 }
 
 @media (min-width: 1024px)
 {
+  .grid
+  {
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-auto-flow: dense;
+    grid-auto-rows: 158px;
+  }
+
+  .banner
+  {
+    height: 70vh;
+  }
+
+  .team .team_grid
+  {
+    grid-template-columns: repeat(4, 150px);
+    justify-content: space-around;
+    width: 50rem;
+  }
+
   .contenedor
   {
     width: 1000px;
@@ -227,21 +305,19 @@ img
     font-size: 45px;
   }
 
-  .grid
-  {
-    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-    grid-auto-flow: dense;
-    grid-auto-rows: 158px;
-  }
-
   .big
   {
     grid-column: span 2;
     grid-row: span 2;
   }
 
+  .banner2
+  {
+    height: 400px;
+  }
+
   .banner2 p
   {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
